@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.tonduong</groupId>
+	<artifactId>servlet-web</artifactId>
+	<version>1.0</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.version>3.6.1</maven.compiler.version>
+		<maven.war.version>3.3.1</maven.war.version>
+		<jsp.app.version>2.0</jsp.app.version>
+		<sitemesh.version>2.4.2</sitemesh.version>
+		<mysql.connector.version>8.0.28</mysql.connector.version>
+		<java.servlet.api.version>3.1.0</java.servlet.api.version>
+		<java.servlet.jstl.version>1.2</java.servlet.jstl.version>
+		<weld.servlet.version>2.4.8.Final</weld.servlet.version>
+		<jackson.bind.version>2.13.2.2</jackson.bind.version>
+		<jackson.core.version>2.13.1</jackson.core.version>
+		<jackson.anotation.version>2.13.1</jackson.anotation.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<!-- Biên dịch ra java bao nhiêu -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+
+			<!-- Đóng gói file war -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${maven.war.version}</version>
+			</plugin>
+		</plugins>
+		<!-- Tên của file war khi đóng gói tạo ra -->
+		<finalName>servlet-web</finalName>
+	</build>
+
+	<dependencies>
+		<!-- Nhận các request từ client -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jsp-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp.app.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Sử dụng các anotation của servlet -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${java.servlet.api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Thư viện hổ trợ JSP Standard Tag Library (JSTL) là thư viện thẻ chuẩn 
+			cung cấp các thẻ để kiểm soát hành vi trang, lặp đi lặp lại và các lệnh điều 
+			khiển, các thẻ quốc tế hóa, và các thẻ SQL. -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${java.servlet.jstl.version}</version>
+		</dependency>
+
+		<!-- Hỗ trợ render giao diện. Theo layout -->
+		<!-- https://mvnrepository.com/artifact/opensymphony/sitemesh -->
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>sitemesh</artifactId>
+			<version>${sitemesh.version}</version>
+		</dependency>
+
+		<!-- Driver mysql jbdc -->
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+
+		<!-- Servlet weld để -->
+		<!-- https://mvnrepository.com/artifact/org.jboss.weld.servlet/weld-servlet -->
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>${weld.servlet.version}</version>
+		</dependency>
+
+
+		<!-- Jackson databind -->
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.bind.version}</version>
+		</dependency>
+
+		<!-- Jackson core -->
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<!-- 
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.core.version}</version>
+		</dependency>
+		 -->
+
+		<!-- Jackson anotation -->
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+		<!-- 
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.anotation.version}</version>
+		</dependency>
+		 -->
+
+	</dependencies>
+</project>
