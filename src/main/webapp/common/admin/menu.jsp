@@ -53,14 +53,9 @@
 				<li class=""><a href="./admin-news"> <i
 						class="menu-icon fa fa-caret-right"></i> Danh sách bài viết
 				</a> <b class="arrow"></b></li>
-				<li class=""><a href="typography.html"> <i
+				<li class=""><a href="./admin-news?action=add"> <i
 						class="menu-icon fa fa-caret-right"></i> Thêm bài viết
 				</a> <b class="arrow"></b></li>
-
-				<li class=""><a href="elements.html"> <i
-						class="menu-icon fa fa-caret-right"></i> Sửa bài viết
-				</a> <b class="arrow"></b></li>
-
 			</ul></li>
 
 		<li class=""><a href="#" class="dropdown-toggle"> <i

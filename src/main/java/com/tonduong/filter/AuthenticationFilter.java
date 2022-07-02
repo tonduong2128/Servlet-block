@@ -26,7 +26,6 @@ public class AuthenticationFilter implements Filter {
 			throws IOException, ServletException {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse resp = (HttpServletResponse) response;
-		System.out.println(req.getRequestURI());
 		HttpSession session = req.getSession();
 		if (session.getAttribute("role") != null && session.getAttribute("role").equals("admin")
 				&& req.getServletPath().contains("/admin")) {

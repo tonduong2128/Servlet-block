@@ -3,7 +3,7 @@ package com.tonduong.model;
 public class NewsModel extends AbstractModel {
 	private String title;
 	private String content;
-	private String thumbnail;
+	private String thumbnail ;
 	private String shortdescription;
 	private Integer categoryid;
 

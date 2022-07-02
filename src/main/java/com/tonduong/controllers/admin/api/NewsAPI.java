@@ -29,6 +29,7 @@ public class NewsAPI extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("application/json");
 		resp.setCharacterEncoding("UTF-8");
+		resp.setHeader("Access-Control-Allow-Origin", "*");
 		PrintWriter printWriter = resp.getWriter();
 		Integer id = null;
 		Integer page = null;
@@ -43,8 +44,6 @@ public class NewsAPI extends HttpServlet {
 			}
 		} catch (Exception e) {
 		}
-		System.out.println(data1);
-		System.out.println(1);
 		
 		try {
 			id = Integer.parseInt(req.getParameter("id"));

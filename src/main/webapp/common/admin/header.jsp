@@ -49,13 +49,16 @@
 <script
 	src="<c:url value="/common/template/admin"/>/js/ace-extra.min.js"></script>
 
-	
+
 <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 <!--[if lte IE 8]>
 		<script src="<c:url value="/common/template/admin"/>/js/html5shiv.min.js"></script>
 		<script src="<c:url value="/common/template/admin"/>/js/respond.min.js"></script>
 		<![endif]-->
+<script
+	src="<c:url value="/common/ckeditor/ckeditor.js"/>"></script>
+
 </head>
 
 <body class="no-skin">
@@ -300,8 +303,8 @@
 
 							<li class="divider"></li>
 
-							<li><a href="./dang-nhap?out=true"> <i class="ace-icon fa fa-power-off"></i>
-									Logout
+							<li><a href="./dang-nhap?out=true"> <i
+									class="ace-icon fa fa-power-off"></i> Logout
 							</a></li>
 						</ul></li>
 				</ul>

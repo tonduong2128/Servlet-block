@@ -1,16 +1,7 @@
 package com.tonduong.dao.impl;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.SQLType;
-import java.sql.Statement;
-import java.sql.Types;
-import java.util.ArrayList;
 import java.util.List;
 
-import com.mysql.cj.MysqlType;
 import com.tonduong.dao.INewsDAO;
 import com.tonduong.mapper.NewsMapper;
 import com.tonduong.model.NewsModel;
@@ -32,7 +23,7 @@ public class NewsDAO extends AbstractDAO implements INewsDAO {
 //					result.setContent(rs.getString("content"));
 //					result.setThumbnail(rs.getString("thumbnail"));
 //					
-//					result.setCreateddate(rs.getTimestamp("createddate"));
+//						result.setCreateddate(rs.getTimestamp("createddate"));
 //					result.setModifieddate(rs.getTimestamp("modifieddate"));
 //					result.setId(rs.getInt("createdby"));
 //					result.setId(rs.getInt("modifiedby"));
